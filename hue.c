@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "hue.h"
 
-void my_function(
-	int some_very_long_parameter_a,
-	int some_very_long_parameter_b,
-	int some_very_long_parameter_c)
-{
-	printf("Hello World!\n");
+void base16_to_hue(struct hue_t *color, const char *base16_str) {
+	sscanf(base16_str, "#%2hhx%2hhx%2hhx", &color->r, &color->g, &color->b);
+}
+
+void base16_to_hue_alpha(struct hue_alpha_t *color, const char *base16_str) {
+	sscanf(base16_str, "#%2hhx%2hhx%2hhx%2hhx", &color->r, &color->g,
+	       &color->b, &color->a);
 }
