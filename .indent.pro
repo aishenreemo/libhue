@@ -2,8 +2,8 @@
 --blank-lines-after-procedures
 --braces-on-if-line
 --braces-on-struct-decl-line
+--braces-on-func-def-line
 --break-before-boolean-operator
---break-function-decl-args-end
 --case-indentation0
 --comment-indentation1
 --cuddle-else
